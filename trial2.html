@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b78">
+  <meta name="description" content="Entrepreneurship support programme enquiries and business development information.">
+  <title>Entrepreneurship Support | Enquiry Portal</title>
+  <style>
+    :root{--navy:#073b78;--blue:#1266b2;--sky:#eaf4ff;--green:#17834b;--ink:#17324f;--muted:#61748a;--line:#d9e4ef;--paper:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#f2f6fb;color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit}
+    .topbar{background:#052b56;color:#eaf4ff;font-size:.84rem;padding:8px 5%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{background:linear-gradient(125deg,#073b78,#1266b2);color:white;padding:28px 5% 48px}
+    .brand{display:flex;align-items:center;gap:13px;max-width:1100px;margin:auto}
+    .brand-mark{width:54px;height:54px;display:grid;place-items:center;border:1px solid #ffffff88;border-radius:50%;font-size:28px;background:#ffffff12}
+    .brand small{display:block;opacity:.84;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem}
+    .brand strong{font-size:1.1rem}
+    .hero{max-width:1100px;margin:36px auto 0;display:grid;grid-template-columns:1.5fr 1fr;gap:28px;align-items:center}
+    .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#bfe4ff}
+    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.08;margin:12px 0 16px;letter-spacing:-.035em}
+    .hero p{max-width:650px;color:#e3f1ff;font-size:1.05rem;margin:0 0 22px}
+    .hero-card{background:#ffffff13;border:1px solid #ffffff3a;border-radius:18px;padding:22px;backdrop-filter:blur(4px)}
+    .hero-card h2{margin:0 0 8px;font-size:1.15rem}
+    .hero-card p{font-size:.92rem;margin:0;color:#e8f4ff}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border:0;border-radius:9px;padding:13px 18px;font-weight:800;cursor:pointer;transition:transform .15s,background .15s}
+    .button:hover{transform:translateY(-1px)}
+    .button-primary{background:var(--green);color:#fff}
+    .button-secondary{background:#fff;color:var(--navy)}
+    main{max-width:1100px;margin:-20px auto 0;padding:0 20px 60px}
+    .notice{background:#fff8e7;border:1px solid #f0d79a;border-left:5px solid #d39a1f;padding:16px 18px;border-radius:10px;font-size:.91rem;margin-bottom:24px}
+    .notice strong{color:#674700}
+    .layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.75fr);gap:24px;align-items:start}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(20px,4vw,32px);box-shadow:0 8px 26px #193d5c0b}
+    .panel h2{margin:0 0 7px;font-size:1.55rem;letter-spacing:-.02em}
+    .sub{margin:0 0 23px;color:var(--muted);font-size:.94rem}
+    .section-heading{font-size:.82rem;text-transform:uppercase;letter-spacing:.09em;color:var(--blue);font-weight:900;border-bottom:1px solid var(--line);padding-bottom:9px;margin:27px 0 14px}
+    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 15px}
+    label{display:block;font-size:.9rem;font-weight:750;margin:0 0 7px}
+    .field{margin-bottom:16px}
+    input,select,textarea{display:block;width:100%;font:inherit;color:var(--ink);border:1px solid #c8d6e5;border-radius:8px;padding:12px 13px;background:#fff;min-height:47px}
+    textarea{resize:vertical;min-height:118px}
+    input:focus,select:focus,textarea:focus{outline:3px solid #cce5ff;border-color:var(--blue)}
+    .hint{font-size:.78rem;color:var(--muted);margin:6px 0 0}
+    .checkline{display:flex;align-items:flex-start;gap:10px;margin:18px 0 4px;font-size:.86rem;color:#42566c}
+    .checkline input{width:18px;min-height:18px;height:18px;margin-top:3px;flex:0 0 auto}
+    .submit{width:100%;font-size:1rem;margin-top:18px}
+    .side{display:grid;gap:18px}
+    .side h3{margin:0 0 10px;font-size:1.1rem}
+    .side p,.side li{font-size:.9rem;color:#53687d}
+    .side ul{padding-left:20px;margin:10px 0}
+    .step{display:flex;gap:12px;margin:15px 0}
+    .num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:var(--sky);color:var(--blue);font-weight:900}
+    .step strong{display:block;font-size:.91rem}
+    .step span{display:block;color:var(--muted);font-size:.83rem}
+    .security{background:#f3f8ff;border:1px solid #d7e8fb;border-radius:12px;padding:15px;font-size:.85rem;color:#425a72}
+    .security strong{display:block;color:var(--navy);margin-bottom:5px}
+    .small-link{font-size:.86rem;color:var(--blue);font-weight:750}
+    footer{background:#082747;color:#d6e6f6;padding:28px 5%;font-size:.84rem}
+    .footer-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .footer-inner p{margin:4px 0}
+    .taskbar{position:fixed;bottom:0;left:0;right:0;background:#061d36;color:#fff;padding:9px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.78rem;z-index:10;box-shadow:0 -3px 14px #0002}
+    .status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#58d68d;margin-right:7px}
+    .toast{display:none;margin-top:14px;padding:12px;border-radius:8px;background:#eaf8ef;color:#155b32;font-size:.9rem}
+    @media(max-width:800px){.hero,.layout{grid-template-columns:1fr}.hero{margin-top:26px}.hero-card{max-width:600px}.layout{gap:18px}main{margin-top:-15px}}
+    @media(max-width:540px){.topbar{font-size:.75rem}.field-grid{grid-template-columns:1fr}.hero{gap:18px}header{padding-bottom:38px}.panel{padding:20px}.taskbar{font-size:.7rem}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>Entrepreneurship Support • Enquiry Portal</span>
+    
+  </div>
+
+  <header>
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">🌍</div>
+      <div><small>Business growth and development</small><strong>Entrepreneurship Support</strong></div>
+    </div>
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Ideas • Enterprise • Opportunity</div>
+        <h1>Help your business take its next step.</h1>
+        <p>Use this page to send a business-support enquiry and request information about programme eligibility, application requirements, and verified submission channels.</p>
+        <a class="button button-secondary" href="#enquiry">Start an enquiry <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-card">
+     
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="notice" role="note">
+      <strong>Independence and safety notice:</strong>Don't share your bank deatils.We care about you Investors'
+    </div>
+
+    <div class="layout">
+      <section class="panel" id="enquiry">
+        <h2>Business Support Enquiry</h2>
+        <p class="sub">Fields marked * are required. Your message will be prepared for WhatsApp so you can review it before sending.</p>
+
+        <form id="enquiryForm">
+          <div class="section-heading">Applicant details</div>
+          <div class="field">
+            <label for="country">Country of residence *</label>
+            <select id="country" name="country" required>
+              <option value="">Choose your country</option>
+              <option>Kenya</option><option>Zimbabwe</option><option>Uganda</option>
+              <option>Tanzania</option><option>South Africa</option><option>Nigeria</option>
+              <option>Ghana</option><option>United States</option><option>United Kingdom</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="fullname">Full names *</label>
+              <input id="fullname" name="fullname" autocomplete="name" required maxlength="120" placeholder="As you prefer to be contacted">
+            </div>
+            <div class="field">
+              <label for="contact">Contact number *</label>
+              <input id="contact" name="contact" type="tel" autocomplete="tel" required maxlength="30" placeholder="+254…">
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="160" placeholder="you@example.com">
+          </div>
+
+          <div class="section-heading">Business information</div>
+          <div class="field-grid">
+            <div class="field">
+              <label for="business">Business or enterprise name</label>
+              <input id="business" name="business" maxlength="120" placeholder="Business name (if applicable)">
+            </div>
+            <div class="field">
+              <label for="sector">Business sector</label>
+              <select id="sector" name="sector">
+                <option value="">Choose a sector</option>
+                <option>Agriculture</option><option>Technology</option><option>Manufacturing</option>
+                <option>Retail and trade</option><option>Education</option><option>Transport</option>
+                <option>Professional services</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="request">What support or information do you need? *</label>
+            <textarea id="request" name="request" required maxlength="1500" placeholder="Briefly describe your business, what it does, and what information you are seeking. Do not include ID numbers, tax numbers, passwords, or banking details."></textarea>
+            <p class="hint">Please do not include confidential or sensitive personal information.</p>
+          </div>
+
+          <div class="section-heading">Documents and verification</div>
+          <div class="security">
+            <strong>Protect your personal information</strong>
+      
+          <label class="checkline" for="consent">
+            <input id="consent" type="checkbox" required>
+            <span>I understand that this is an independent enquiry.*</span>
+          </label>
+
+          <button class="button button-primary submit" type="submit">Prepare WhatsApp enquiry <span aria-hidden="true">↗</span></button>
+          <div id="status" class="toast" role="status" aria-live="polite"></div>
+          <p class="hint">Your browser will open WhatsApp with the enquiry text. You must review and send the message yourself.</p>
+        </form>
+      </section>
+
+      <aside class="side">
+        <section class="panel">
+          <h3>How it works</h3>
+          <div class="step"><div class="num">1</div><div><strong>Complete the enquiry</strong><span>Share basic contact and business details only.</span></div></div>
+          <div class="step"><div class="num">2</div><div><strong>Review in WhatsApp</strong><span>Check the prepared message before sending it.</span></div></div>
+          <div class="step"><div class="num">3</div><div><strong>Verify the programme</strong><span>Confirm eligibility and secure document requirements through independently verified official channels.</span></div></div>
+        </section>
+        <section class="panel">
+          <h3>Documents may be requested later</h3>
+          <ul>
+            <li>KRA or tax-registration information</li>
+            <li>National ID or passport</li>
+            <li>Business registration or licence</li>
+          </ul>
+          <p>Requirements depend on the actual programme. Do not upload documents to an unverified page or send them to an unverified contact.</p>
+        </section>
+        <section class="security">
+          <strong>Need to contact the enquiry recipient?</strong>
+          <p><a class="small-link" href="https://wa.me/message/EPPEDOG2NOCTP1" target="_blank" rel="noopener noreferrer">Open WhatsApp contact ↗</a></p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong>Entrepreneurship Support Enquiry</strong>
+       </div>
+    <div class="payment-info">
+  <h2>Registration Fee</h2>
+  <p>
+    For information about registration fees, payment methods,
+    and applicable requirements, please enquire through our
+    WhatsApp contact.
+  </p>
+  <a href="https://wa.me/message/EPPEDOG2NOCTP1"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="whatsapp-button">
+    Enquire About Registration Fee on WhatsApp
+  </a>
+</div>
+      <div><p>© 2026 • For enquiry purposes only</p></div>
+   
+  </footer>
+
+  <div class="taskbar">
+    <span><span class="status-dot"></span>Entrepreneurship Support</span>
+   
+  </div>
+
+  <script>
+    const form = document.getElementById('enquiryForm');
+    const statusBox = document.getElementById('status');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const value = id => document.getElementById(id).value.trim();
+      const message = [
+        'Entrepreneurship Support — Enquiry',
+        '',
+        'Country: ' + value('country'),
+        'Full names: ' + value('fullname'),
+        'Contact: ' + value('contact'),
+        'Email: ' + value('email'),
+        'Business: ' + (value('business') || 'Not provided'),
+        'Sector: ' + (value('sector') || 'Not provided'),
+        '',
+        'Enquiry:',
+        value('request'),
+        '',
+        'Please provide the verified programme name, eligibility criteria, official application link, and secure document-submission instructions.'
+      ].join('\n');
+
+      const url = 'https://wa.me/message/EPPEDOG2NOCTP1?text=' + encodeURIComponent(message);
+      statusBox.style.display = 'block';
+      statusBox.textContent = 'Opening WhatsApp. Review the message before you send it.';
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>
